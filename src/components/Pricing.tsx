@@ -1,0 +1,117 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Check } from "lucide-react";
+
+const Pricing = () => {
+  const packages = [
+    {
+      name: "Básico",
+      price: "49.99",
+      features: [
+        "Pagina Web/Landing Page",
+        "Diseño Web Personalizado",
+        "Hasta 8 secciones",
+        "Optimización SEO Básica",
+        "Administracion y carga de contenido en Hosting",
+        "Seguridad Certificado SSL",
+        "Copia y Actualizaciones de Seguridad",
+      ],
+      maintenance: "14.99",
+      highlighted: false,
+    },
+    {
+      name: "Estándar",
+      price: "179.99",
+      features: [
+        "Paquete Básico",
+        "Diseño Web Avanzado",
+        "Hasta 5 páginas completas",
+        "Optimización SEO Completa (configuración de títulos, descripciones y URLs amigables)",
+        "Alojamiento Web (Hosting) de alta velocidad por 1 mes GRATIS.",
+      ],
+      maintenance: "24.99",
+      highlighted: true,
+    },
+    {
+      name: "Premium",
+      price: "329.99",
+      features: [
+        "Paquete Estándar",
+        "Diseño Web Premium",
+        "Hasta 10 páginas completas",
+        "Estrategia de Marketing Digital",
+        "Alojamiento Web (Hosting) de alta velocidad por 3 mes GRATIS",
+      ],
+      maintenance: "42.99",
+      highlighted: false,
+    },
+  ];
+
+  return (
+    <section id="pricing" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Precios y <span className="text-primary">Paquetes</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Elige el paquete perfecto para ti y comienza tu viaje digital hoy mismo.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {packages.map((pkg, index) => (
+            <Card
+              key={pkg.name}
+              className={`relative p-8 transition-all duration-300 hover:-translate-y-2 animate-scale-in ${
+                pkg.highlighted
+                  ? "border-2 border-primary shadow-[0_0_30px_rgba(0,102,255,0.2)] bg-gradient-to-b from-primary/5 to-transparent"
+                  : "hover:shadow-xl"
+              }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {pkg.highlighted && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-glow">
+                  Recomendado
+                </div>
+              )}
+
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-5xl font-bold text-primary">${pkg.price}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {pkg.features.map((feature, idx) => (
+                  <li key={idx} className="flex gap-3 text-sm">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="border-t border-border pt-6 mb-6">
+                <p className="text-sm font-semibold mb-2">
+                  Mantenimiento mensual (Alojamiento + Cambios personalizados):{" "}
+                  <span className="text-primary text-lg">${pkg.maintenance}</span>
+                </p>
+              </div>
+
+              <Button
+                variant={pkg.highlighted ? "hero" : "default"}
+                className="w-full"
+                size="lg"
+              >
+                Seleccionar
+              </Button>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;
