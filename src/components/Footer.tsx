@@ -20,6 +20,7 @@ const Footer = () => {
       "CentroPokémon",
       "Huddle subscription",
       "Newsletter sign-up",
+      "Phoenix Beauty Spa",
     ],
   };
 
@@ -135,6 +136,18 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   Newsletter sign-up
+                </a>
+              </li>
+
+              {/* Modifica este href si deseas cambiar el link del proyecto Phoenix Beauty Spa */}
+              <li>
+                <a
+                  href="https://phoenix-beauty-spa.netlify.app/" // <-- AQUÍ (link Phoenix Beauty Spa)
+                  className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Phoenix Beauty Spa
                 </a>
               </li>
 

@@ -21,6 +21,12 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&h=600&fit=crop",
       link: "https://emwebdesigner.github.io/LP-Newsletter-sign-up/",
     },
+    {
+      title: "Phoenix Beauty Spa",
+      description: "Sitio web premium para spa de belleza con servicios exclusivos",
+      image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&h=600&fit=crop",
+      link: "https://phoenix-beauty-spa.netlify.app/",
+    },
   ];
 
   return (
