@@ -42,9 +42,9 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-4">
               {[
-                { icon: Instagram, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: MessageCircle, href: "#" },
+                { icon: Instagram, href: "https://www.instagram.com/emwebdesigner/" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/ender-marquez-576b90379/" },
+                { icon: MessageCircle, href: "https://wa.link/rl7ps6" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -64,13 +64,15 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Soluciones</h3>
             <ul className="space-y-3">
               {sections.soluciones.map((item) => (
-                <li key={item}>
-                  <a
+                <li key={item}
+                className="text-gray-300 hover:text-primary transition-colors block hover:translate-x-1 duration-300"
+                >
+                  {/* <a
                     href="#"
                     className="text-gray-300 hover:text-primary transition-colors inline-block hover:translate-x-1 duration-300"
-                  >
+                  > */}
                     {item}
-                  </a>
+                  {/* </a> */}
                 </li>
               ))}
             </ul>
@@ -81,13 +83,15 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Recursos</h3>
             <ul className="space-y-3">
               {sections.recursos.map((item) => (
-                <li key={item}>
-                  <a
+                <li key={item}
+                className="text-gray-300 hover:text-secondary transition-colors hover:translate-x-1 duration-300"
+                >
+                  {/* <a
                     href="#"
                     className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
-                  >
+                  > */}
                     {item}
-                  </a>
+                  {/* </a> */}
                 </li>
               ))}
             </ul>
@@ -97,16 +101,43 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Proyectos</h3>
             <ul className="space-y-3">
-              {sections.proyectos.map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+
+              {/* Modifica este href si deseas cambiar el link del proyecto CentroPokémon */}
+              <li>
+                <a
+                  href="https://emwebdesigner.github.io/Web-Centro-Pokemon/" // <-- AQUÍ (link Centro Pokémon)
+                  className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CentroPokémon
+                </a>
+              </li>
+
+              {/* Modifica este href si deseas cambiar el link del proyecto Huddle subscription */}
+              <li>
+                <a
+                  href="https://emwebdesigner.github.io/Proyecto-landing-page/#" // <-- AQUÍ (link Huddle subscription)
+                  className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Huddle subscription
+                </a>
+              </li>
+
+              {/* Modifica este href si deseas cambiar el link del proyecto Newsletter */}
+              <li>
+                <a
+                  href="https://emwebdesigner.github.io/LP-Newsletter-sign-up/" // <-- AQUÍ (link Newsletter sign-up)
+                  className="text-gray-300 hover:text-secondary transition-colors inline-block hover:translate-x-1 duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Newsletter sign-up
+                </a>
+              </li>
+
             </ul>
           </div>
         </div>

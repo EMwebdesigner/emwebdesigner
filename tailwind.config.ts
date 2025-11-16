@@ -47,6 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        pera: {
+          DEFAULT: "hsl(var(--pera))",
+        },
         dark: {
           bg: "hsl(var(--dark-bg))",
           card: "hsl(var(--dark-card))",

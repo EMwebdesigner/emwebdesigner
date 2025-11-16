@@ -18,6 +18,8 @@ const Pricing = () => {
       ],
       maintenance: "14.99",
       highlighted: false,
+      whatsapp: "https://wa.link/l1xqnm", // 💬 Link Básico
+
     },
     {
       name: "Estándar",
@@ -31,6 +33,7 @@ const Pricing = () => {
       ],
       maintenance: "24.99",
       highlighted: true,
+      whatsapp: "https://wa.link/tahb53", // 💬 Link Estándar
     },
     {
       name: "Premium",
@@ -44,6 +47,7 @@ const Pricing = () => {
       ],
       maintenance: "42.99",
       highlighted: false,
+      whatsapp: "https://wa.link/0ur04m", // 💬 Link Premium
     },
   ];
 
@@ -99,13 +103,23 @@ const Pricing = () => {
                 </p>
               </div>
 
+              {/* BOTÓN WhatsApp por paquete */}
               <Button
+                asChild
                 variant={pkg.highlighted ? "hero" : "default"}
                 className="w-full"
                 size="lg"
-              >
-                Seleccionar
+                >
+                    <a
+                        href={pkg.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Seleccionar
+                    </a>
               </Button>
+
+
             </Card>
           ))}
         </div>

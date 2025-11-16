@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/developer.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import html5Logo from '../assets/icons/html5-logo.svg'; // O .png, .webp, etc.
+import css3Logo from '../assets/icons/css3-logo.svg';
+import jsLogo from '../assets/icons/javascript-logo.svg';
+import wordpressLogo from '../assets/icons/wordpress-logo.svg';
+import gitLogo from '../assets/icons/git-logo.svg'; // A menudo se usa el logo de Git-SCM o GitKraken
+import githubLogo from '../assets/icons/github-logo.svg';
 
 const Hero = () => {
   const scrollToServices = () => {
@@ -10,14 +16,22 @@ const Hero = () => {
     }
   };
 
-  const techStack = [
-    { name: "HTML5", icon: "🔷" },
-    { name: "CSS3", icon: "🎨" },
-    { name: "JavaScript", icon: "⚡" },
-    { name: "WordPress", icon: "📝" },
-    { name: "Git", icon: "🔧" },
-    { name: "GitHub", icon: "🐱" },
-  ];
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    gap: '20px', 
+    padding: '10px 0', 
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+    borderRadius: '10px',
+    marginBottom: '30px' // Asegúrate de añadir el margen inferior si es necesario
+}}>
+    <img src={html5Logo} alt="HTML5 Logo" style={{ width: '40px' }} />
+    <img src={css3Logo} alt="CSS3 Logo" style={{ width: '40px' }} />
+    <img src={jsLogo} alt="JavaScript Logo" style={{ width: '40px' }} />
+    <img src={wordpressLogo} alt="WordPress Logo" style={{ width: '40px' }} />
+    <img src={gitLogo} alt="Git Logo" style={{ width: '40px' }} />
+    <img src={githubLogo} alt="GitHub Logo" style={{ width: '40px' }} />
+</div>
 
   return (
     <section
@@ -34,27 +48,29 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
-          <div className="flex justify-center lg:justify-start animate-fade-in">
+          <div className="flex justify-center lg:justify-center animate-fade-in">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-300 animate-glow" />
               <div className="relative">
                 <img
                   src={profileImg}
                   alt="EMwebdesigner Profile"
-                  className="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-card"
+                  className="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-pera"
                 />
-                {/* Tech Stack Icons */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-3 bg-card/95 backdrop-blur-sm px-6 py-3 rounded-full shadow-xl border border-border">
-                  {techStack.map((tech) => (
-                    <div
-                      key={tech.name}
-                      className="text-2xl hover:scale-125 transition-transform cursor-pointer"
-                      title={tech.name}
-                    >
-                      {tech.icon}
-                    </div>
-                  ))}
-                </div>
+
+                {/* Contenedor de Logos - MÉTODO ALTERNATIVO DE CENTRADO */}
+<div className="absolute -bottom-8 left-0 right-0 
+                flex justify-center gap-4 p-3 
+                bg-white/90 backdrop-blur-sm rounded-lg shadow-xl border border-border">
+    
+    <img src={html5Logo} alt="HTML5 Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="HTML5" />
+    <img src={css3Logo} alt="CSS3 Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="CSS3" />
+    <img src={jsLogo} alt="JavaScript Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="JavaScript" />
+    <img src={wordpressLogo} alt="WordPress Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="WordPress" />
+    <img src={gitLogo} alt="Git Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="Git" />
+    <img src={githubLogo} alt="GitHub Logo" className="w-8 h-8 hover:scale-125 transition duration-300" title="GitHub" />
+</div>
+
               </div>
             </div>
           </div>
@@ -78,7 +94,7 @@ const Hero = () => {
               <Button
                 variant="hero"
                 size="lg"
-                onClick={scrollToServices}
+                onClick={() => window.open("https://wa.link/rl7ps6", "_blank")}
                 className="text-lg px-8 py-6"
               >
                 ¡Conoce más!

@@ -7,19 +7,19 @@ const Portfolio = () => {
       title: "CentroPokémon",
       description: "Plataforma web interactiva para gestión de Pokémon",
       image: "https://images.unsplash.com/photo-1542779283-429940ce8336?w=800&h=600&fit=crop",
-      link: "#",
+      link: "https://emwebdesigner.github.io/Web-Centro-Pokemon/",
     },
     {
       title: "Huddle Subscription",
       description: "Sistema de suscripción moderno y funcional",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      link: "#",
+      link: "https://emwebdesigner.github.io/Proyecto-landing-page/#",
     },
     {
       title: "Newsletter Sign-up",
       description: "Landing page optimizada para captación de leads",
       image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&h=600&fit=crop",
-      link: "#",
+      link: "https://emwebdesigner.github.io/LP-Newsletter-sign-up/",
     },
   ];
 
