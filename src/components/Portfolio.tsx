@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import phoenixSpaImage from "@/assets/phoenix-spa.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -20,6 +21,12 @@ const Portfolio = () => {
       description: "Landing page optimizada para captación de leads",
       image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&h=600&fit=crop",
       link: "https://emwebdesigner.github.io/LP-Newsletter-sign-up/",
+    },
+    {
+      title: "Phoenix Beauty Spa",
+      description: "Sitio web premium para spa de belleza con servicios exclusivos",
+      image: phoenixSpaImage,
+      link: "https://phoenix-beauty-spa.netlify.app/",
     },
   ];
 
