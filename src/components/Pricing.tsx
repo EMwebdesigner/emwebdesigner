@@ -7,6 +7,7 @@ const Pricing = () => {
     {
       name: "Básico",
       price: "49.99",
+      discountPrice: "34.99",
       features: [
         "Pagina Web/Landing Page",
         "Diseño Web Personalizado",
@@ -24,6 +25,7 @@ const Pricing = () => {
     {
       name: "Estándar",
       price: "179.99",
+      discountPrice: "125.99",
       features: [
         "Paquete Básico",
         "Diseño Web Avanzado",
@@ -38,6 +40,7 @@ const Pricing = () => {
     {
       name: "Premium",
       price: "329.99",
+      discountPrice: "230.99",
       features: [
         "Paquete Estándar",
         "Diseño Web Premium",
@@ -55,6 +58,9 @@ const Pricing = () => {
     <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block bg-gradient-to-r from-destructive to-primary text-white px-8 py-3 rounded-full font-bold text-lg mb-4 animate-glow shadow-[0_0_30px_rgba(239,68,68,0.5)]">
+            🔥 BLACK FRIDAY - 30% OFF 🔥
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Precios y <span className="text-primary">Paquetes</span>
           </h2>
@@ -82,8 +88,12 @@ const Pricing = () => {
 
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-5xl font-bold text-primary">${pkg.price}</span>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-2xl text-muted-foreground line-through opacity-60">${pkg.price}</span>
+                  <div className="flex items-baseline justify-center gap-2">
+                    <span className="text-5xl font-bold text-primary animate-pulse">${pkg.discountPrice}</span>
+                    <span className="bg-destructive text-white px-3 py-1 rounded-full text-sm font-bold">-30%</span>
+                  </div>
                 </div>
               </div>
 
