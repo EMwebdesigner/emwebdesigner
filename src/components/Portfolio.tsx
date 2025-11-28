@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import phoenixSpaImage from "@/assets/phoenix-spa.jpg";
 import okCosechaImage from "@/assets/ok-cosecha.jpg";
+import ystattooImage from "@/assets/ystattoo.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -34,6 +35,12 @@ const Portfolio = () => {
       description: "Sitio web para restaurante de comida china venezolana con menú y reservas",
       image: okCosechaImage,
       link: "https://restaurantokcosecha.lovable.app",
+    },
+    {
+      title: "YS Tattoo",
+      description: "Sitio web profesional para estudio de tatuajes con galería y sistema de reservas",
+      image: ystattooImage,
+      link: "https://ystattoo.lovable.app",
     },
   ];
 
