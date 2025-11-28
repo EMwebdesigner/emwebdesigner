@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import phoenixSpaImage from "@/assets/phoenix-spa.jpg";
+import okCosechaImage from "@/assets/ok-cosecha.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -27,6 +28,12 @@ const Portfolio = () => {
       description: "Sitio web premium para spa de belleza con servicios exclusivos",
       image: phoenixSpaImage,
       link: "https://phoenix-beauty-spa.netlify.app/",
+    },
+    {
+      title: "Restaurant Ok Cosecha",
+      description: "Sitio web para restaurante de comida china venezolana con menú y reservas",
+      image: okCosechaImage,
+      link: "https://restaurantokcosecha.lovable.app",
     },
   ];
 
