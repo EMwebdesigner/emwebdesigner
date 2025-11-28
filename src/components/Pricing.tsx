@@ -18,6 +18,7 @@ const Pricing = () => {
         "Copia y Actualizaciones de Seguridad",
       ],
       maintenance: "14.99",
+      maintenanceDiscount: "10.49",
       highlighted: false,
       whatsapp: "https://wa.link/l1xqnm", // 💬 Link Básico
 
@@ -34,6 +35,7 @@ const Pricing = () => {
         "Alojamiento Web (Hosting) de alta velocidad por 1 mes GRATIS.",
       ],
       maintenance: "24.99",
+      maintenanceDiscount: "17.49",
       highlighted: true,
       whatsapp: "https://wa.link/tahb53", // 💬 Link Estándar
     },
@@ -49,6 +51,7 @@ const Pricing = () => {
         "Alojamiento Web (Hosting) de alta velocidad por 3 mes GRATIS",
       ],
       maintenance: "42.99",
+      maintenanceDiscount: "30.09",
       highlighted: false,
       whatsapp: "https://wa.link/0ur04m", // 💬 Link Premium
     },
@@ -108,9 +111,13 @@ const Pricing = () => {
 
               <div className="border-t border-border pt-6 mb-6">
                 <p className="text-sm font-semibold mb-2">
-                  Mantenimiento mensual (Alojamiento + Cambios personalizados):{" "}
-                  <span className="text-primary text-lg">${pkg.maintenance}</span>
+                  Mantenimiento mensual (Alojamiento + Cambios personalizados):
                 </p>
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-lg text-muted-foreground line-through opacity-60">${pkg.maintenance}</span>
+                  <span className="text-2xl font-bold text-primary">${pkg.maintenanceDiscount}</span>
+                  <span className="bg-destructive text-white px-2 py-1 rounded-full text-xs font-bold">-30%</span>
+                </div>
               </div>
 
               {/* BOTÓN WhatsApp por paquete */}
