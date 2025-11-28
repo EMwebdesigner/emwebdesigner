@@ -3,6 +3,7 @@ import { ExternalLink } from "lucide-react";
 import phoenixSpaImage from "@/assets/phoenix-spa.jpg";
 import okCosechaImage from "@/assets/ok-cosecha.jpg";
 import ystattooImage from "@/assets/ystattoo.jpg";
+import aqServiciosImage from "@/assets/aq-servicios.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -13,10 +14,10 @@ const Portfolio = () => {
       link: "https://emwebdesigner.github.io/Web-Centro-Pokemon/",
     },
     {
-      title: "Huddle Subscription",
-      description: "Sistema de suscripción moderno y funcional",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      link: "https://emwebdesigner.github.io/Proyecto-landing-page/#",
+      title: "AQ Servicios y Suministros",
+      description: "Sitio web para empresa de servicios eléctricos con más de 20 años de experiencia",
+      image: aqServiciosImage,
+      link: "https://aq-servicios-suministros.lovable.app",
     },
     {
       title: "Newsletter Sign-up",
